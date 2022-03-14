@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---//-->
+	<!--- les balises og -->
+	
+	<!---// fin  des balises og -->
+	<!---//-->
+	<!--- Iinclusion des liens css-->
+	<link rel="icon" href="Web/ImageBin/identite/logo.png"/>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+	<!-- Google Fonts Roboto -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+	<!---  inclusion des polices -->
+	<link rel="stylesheet" href="Web/fonts/stylesheet.css" />
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="Web/Utilitaire/CSS/bootstrap.min.css">
+	<link rel="stylesheet" href="Web/Utilitaire/CSS/mdb.min.css">
+	<link rel="stylesheet" href="Web/Utilitaire/CSS/compiled-addons-4.19.1.min.css">
+	<link rel="stylesheet" type="text/css" href="Web/Utilitaire/CSS/mdb-plugins-gathered.min.css">
+	<link rel="stylesheet" href="Web/FrameCss/css/all.css">
+	<!--  -->
+	<!-- Bootstrap Free core CSS -->
+	<link rel="stylesheet" href="Web/MDB Free/css/style.css">
+	<link rel="stylesheet" href="Web/FrameCss/moncss/moncodage.css">
+	<link rel="alternate stylesheet" href="Web/MDB Free/scss/mdb-free.scss">
+	<link rel="alternate stylesheet" href="Web/MDB Free/scss/mdb-lite-free.scss">
+	<link rel="stylesheet" href="Web/FrameCss/css/comportement_boostrap.css">
+	 <link rel="stylesheet" href="Web/Mon frame/monJS.js">
+	 <!--- <link rel="stylesheet" href="Web/MDB Free/css/bootstrap.min.css"/>  -->
+	 <!-- <link rel="stylesheet" href="Web/MDB Free/css/mdb.min.css"/> -->
+	 <link rel="stylesheet" href="Web/Mon frame/monJS.js">
+	 <!---// fin  des liens css -->
+	 <!---//-->
+	 <!-- integration des style direct -->
+	 <style>
+		/*---------------------- Insertion de police --------------------- general*/
+		/*---/Roboto/--*/	
+		@font-face {
+        font-family: 'quadranta';
+        src: url('quadranta.eot?') format('eot'),
+        url('quadranta.otf') format('truetype'),
+        url('quadranta.woff') format('woff'),
+        url('quadranta.svg#QuadrantaBold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }	 
+        h4 {
+        font-family:quadranta, sans-serif;
+        font-size:3em;
+        }
+		
+		@font-face {
+	    font-family: 'roboto';
+	    src: url('Fonts/Roboto-Light.ttf');
+		src: url('Fonts/Roboto-LightItalic.ttf');
+		src: url('Fonts/Roboto-Medium.ttf');
+		src: url('Fonts/Roboto-Thin.ttf');
+		font-weight: normal;
+	    font-style: normal;
+		/*---/Sanchez/--*/	
+		font-family: 'Sanchezregular';
+		src: url('Fonts/Sanchezregular.woff');
+	    font-weight: normal;
+	    font-style: normal; }
+		monsanchez {
+			font-family : Sanchez regular, sans-serif;
+            font : size 3px;  }
+		
+		/*---/Sanchez/--*/	
+		sanchez{
+		font-family : 'Anton';
+		src: url('Fonts/Anton-Regular.ttf');
+	    font-weight: normal;
+	    font-style: normal;}
+	    
+		/*------- -------------------------------------------------------- general*/
+		.recadrage {
+			margin: 0px;
+			padding: 0px;
+		}
+		/*-------*/
+		.monvert {
+			background-color: #1E8210;
+		}
+		/*-------*/
+		/*-------*/
+		.monjaune {
+			background-color: #FF8800;
+		}
+		/*-------*/
+		/*-------*/
+		.montransparent {
+			background-color: rgba(255, 255, 255, 0.1)
+		}
+		/*-------*/
+		/*-------*/
+        .trait
+		{
+        background-color: #FFF;
+        height: 1pt;
+        width: 100%;
+        }
+		/*-------*/
+		/* ne cible <a> que lorsqu'il est activé */
+        /* par exemple quand on clique dessus */
+        a:active {
+		background-color: rgba(255, 255, 255, 0.1)
+        }
+		/*-------*/
+		/*/////////////// -------------------------------------------------------- general*/
+		.carousel-multi-item.v-2 .carousel-inner .carousel-item.active,
+      .carousel-multi-item.v-2 .carousel-item-next,
+      .carousel-multi-item.v-2 .carousel-item-prev {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+      .carousel-multi-item.v-2 .carousel-item-right.active,
+      .carousel-multi-item.v-2 .carousel-item-next {
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%); }
+      .carousel-multi-item.v-2 .carousel-item-left.active,
+      .carousel-multi-item.v-2 .carousel-item-prev {
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%); }
+      .carousel-multi-item.v-2 .carousel-item-right,
+      .carousel-multi-item.v-2 .carousel-item-left {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0); }
+		
+	 </style>
+	 <script>
+	 $(function () {
+    $("#mdb-lightbox-ui").load("Web/Utilitaire/mdb-lightbox-ui.html");
+    });
+	 // Treeview Initialization
+   $(document).ready(function() {
+   $('.treeview').mdbTreeview();
+   });
+	 </script>
+
+	 <link rel="stylesheet" href="web/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="web/bootstrap-5.0.2-dist/css/bootstrap-utilities.css">
+
+
+    <!-- Font awesome cdn CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--Boostrap Core CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Global Africa Business</title>
+</head>
+
+<body>
+
+    <nav class="cc-navbar navbar navbar-expand-lg position-fixed  navbar-dark w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand text-uppercase mx-4 py-3" href="index.html">Global Africa Business</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item pe-4">
+                <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item pe-4">
+                <a class="nav-link" href="notre agence/aproposdenous.html">Notre Agence</a>
+              </li>
+              <li class="nav-item pe-4 dropdown">
+                <a class="nav-link dropdown-toggle" href="services/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nos Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="services/devapp.html">Developpement d'Application</a></li>
+                  <li><a class="dropdown-item" href="services/infogra.html">Création Graphique</a></li>
+                  <li><a class="dropdown-item" href="services/basedonne.html">Gestion de base de données</a></li>
+                  <li><a class="dropdown-item" href="services/commanager.html">Community Management</a></li>
+                  <li><a class="dropdown-item" href="services/systinfo.html">Expertise et Support en Systèmes d'Information</a></li>
+                  <li><a class="dropdown-item" href="services/siteweb.html">Création de site vitrine</a></li>
+                </ul>
+              </li>
+              <li class="nav-item pe-4">
+                <a class="btn btn-order rounded-0" href="formulaire de devis/formulaire.html">Passer la Commande</a>
+              </li>
+              <li class="nav-item pe-4">
+                <a class="nav-link" href="contacter nous/contact.html">Contactez-Nous</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+
+<section class="cc-container d-flex justify-content-center align-items-center merriweather bg-dark text-light">
+<div class="container">
+    <div class="row">
+      <h1 class="text-capitalize py-3 redressed banner-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit <br>
+      </h1>
+      <p class="cc">
+          <button class="btn btn-order btn-lg me-5 rounded-0 merriweather"><a href="formulaire de devis/formulaire.html">Commandez Maintenant</a></button>
+          <button class="btn btn-outline-info btn-lg rounded-0 merriweather"><a href="notre agence/aproposdenous.html">Voir plus</a></button>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-50 my-5 ">
+        <img src="images/business-people-ga2e78efd1_1280.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Community Management</h5>
+          <button class="btn btn-outline-info btn-lg rounded-0 merriweather"><a href="services/commanager.html">Voir plus</a></button> 
+        </div>
+        
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-50 my-5">
+        <img src="services/maintenance-equipement-informatique.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Systeme Informatique</h5>
+          <button class="btn btn-outline-info btn-lg rounded-0 merriweather"><a href="services/systinfo.html">Voir plus</a></button>
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-50 my-5">
+        <img src="images/wallpaper-g60e8f9d2a_640.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Infrographie</h5>
+          <button class="btn btn-outline-info btn-lg rounded-0 merriweather"><a href="services/infogra.html">Voir plus</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-50 my-5">
+        <img src="services/bento4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Creation des sites Web</h5>
+          <button class="btn btn-outline-info btn-lg rounded-0 merriweather"><a href="services/siteweb.html">Voir plus</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-50 my-5">
+        <img src="services/5bfd713875508d243c03b0f2a8.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Developpement d'Application</h5>
+          <button class="btn btn-outline-info btn-lg rounded-0 merriweather"><a href="services/devapp.html">Voir plus</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-50 my-5">
+        <img src="services/10909845.jpg" class="card-img-top " alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Gestion de base de donnes</h5>
+          <button class="btn btn-outline-info btn-lg rounded-0 merriweather"><a href="services/basedonne.html">Voir plus</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cc-menu py-5 merriweather">
+  <div class="container">
+      <div class="row">
+          <h3 class="text-center text-light merriweather">CLIENT SATISFAIT</h3>
+          <div class="card bg-transparent text-center mb-4">
+            <div class="card-header redressed fs-4">
+              <ul class="nav nav-tabs justify-content-center card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">Création graphique</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">Site internet</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">Base de données</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/pexels-pixabay-39284.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Site web reponsive</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/graphics-gec010d71a_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Creation graphique</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col d-sm-none d-md-block">
+          <div class="card">
+            <img src="images/golden-swing-g9fd670cc6_640.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Logo</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col d-sm-none d-md-block">
+          <div class="card">
+            <img src="images/isic_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Systeme informatique</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<footer class="bg-light text-dark pt-5 pb-4">
+  <div class="container text-center text-md-left">
+    <div class="row text-center text-md-left">
+
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">A propos de nous</h5>
+        <hr class="mb-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Excepturi voluptates obcaecati, rem vel nihil harum facere, 
+          velit impedit incidunt maxime iusto aliquam consequuntur possimus neque et, eveniet perferendis deserunt beatae?</p>
+
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">Nos services</h5>
+        <hr class="mb-4">
+        <p>
+          <a href="services/basedonne.html" class="text-dark" style="text-decoration: none;">Gestion de base de données</a>
+        </p>
+        <p>
+          <a href="services/commanager.html" class="text-dark" style="text-decoration: none;"></a>Community Management</a>
+        </p>
+        <p>
+          <a href="services/devapp.html" class="text-dark" style="text-decoration: none;">Developpement d'Application</a>
+        </p>
+        <p>
+          <a href="services/basedonne.html" class="text-dark" style="text-decoration: none;">Infographie</a>
+        </p>
+        <p>
+          <a href="services/systinfo.html" class="text-dark" style="text-decoration: none;">Systeme Informatique</a>
+        </p>
+        <p>
+          <a href="services/siteweb.html" class="text-dark" style="text-decoration: none;">Site web</a>
+        </p>
+      </div>
+
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">Menu</h5>
+        <hr class="mb-4">
+        <p>
+          <a href="index.html" class="text-dark" style="text-decoration: none;">Accueil</a>
+        </p>
+        <p>
+          <a href="notre agence/aproposdenous.html" class="text-dark" style="text-decoration:none;">Notre Agence</a>
+        </p>
+        <p>
+          <a href="services/services.html" class="text-dark" style="text-decoration: none;">Nos services</a>
+        </p>
+        <p>
+          <a href="formulaire de devis/formulaire.html" class="text-dark" style="text-decoration: none;">Commander</a>
+        </p>
+        <p>
+          <a href="contacter nous/contact.html" class="text-dark" style="text-decoration: none;">Contactez-Nous</a>
+        </p>
+      </div>
+
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">Populaire</h5>
+        <hr class="mb-4">
+        <p>
+          <a href="services/infogra.html" class="text-dark" style="text-decoration: none;">Logo</a>
+        </p>
+        <p>
+          <a href="services/siteweb.html" class="text-dark" style="text-decoration:none;">Site mobile</a>
+        </p>
+        <p>
+          <a href="services/commanager.html" class="text-dark" style="text-decoration: none;">Gestion des reseaux</a>
+        </p>
+        <p>
+          <a href="services/devapp.html" class="text-dark" style="text-decoration: none;">Jeux</a>
+        </p>
+        <p>
+          <a href="services/basedonne.html" class="text-dark" style="text-decoration: none;">Controle de la base de données</a>
+        </p>
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">Contact</h5>
+        <hr class="mb-4">
+        <p>
+          <li class="fas fa-user"><p>Global Africa Business</p></li>
+        </p>
+        <p>
+          <i class="fas fa-print"><p>RCCM/035G-40003B1-20021</p></i>
+        </p>
+        <p>
+          <li class="fas fa-envelope"><p>zumavo2@gmail.com</p></li>
+        </p>
+        <p>
+          <li class="fas fa-phone"><p>076509625</p></li>
+        </p>
+        <p>
+          <li class="fas fa-home"><p>Bp.1322 LBV-Sagbassa Copé</p></li>
+        </p>
+        
+      </div>
+
+
+      <hr class="mb-4">
+      <div class="row d-flex justify-content-center">
+        <div>
+          <p>
+            Copyright 2022 All Rights Reserved By :
+          </p>
+          <a href="#" style="text-decoration:none" ></a>
+          <strong class="text-info">LEBOMO Edna</strong>
+        </div>
+      </div>
+
+
+      <div class="row d-flex justify-content-center">
+        <div class="text-center">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><li class="fab fa-facebook"></li></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><li class="fab fa-google-plus"></li></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><li class="fab fa-linkedin-in"></li></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><li class="fab fa-twitter"></li></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><li class="fab fa-youtube"></li></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<!---//-->
+	<!---//-->
+	<!-- integration des fichiers java script --> 
+	<script type="text/javascript" src="Web/Utilitaire/JS/jquery.min.js"></script> 
+    <script type="text/javascript" src="Web/Utilitaire/JS/popper.min.js"></script> 
+    <script type="text/javascript" src="Web/Utilitaire/JS/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="Web/Utilitaire/JS/mdb.min.js"></script> 
+    <script type="text/javascript" src="Web/Utilitaire/JS/compiled-addons.min.js"></script> 
+    <script type="text/javascript" src="Web/Utilitaire/JS/mdb-plugins-gathered.min.js"></script> 
+    <script type="text/javascript" src="Web/FrameCss/js/jquery-2.1.4.min.js"></script> 
+    <script type="text/javascript" src="Web/FrameCss/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">{}</script>
+	<div class="hiddendiv common"></div>
+	<!-- Your custom scripts (optional) -->
+	<script type="text/javascript"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html> 
